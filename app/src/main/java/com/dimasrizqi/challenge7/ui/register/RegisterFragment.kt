@@ -10,6 +10,9 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.dimasrizqi.challenge7.R
 import com.dimasrizqi.challenge7.databinding.FragmentRegisterBinding
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -17,6 +20,7 @@ class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
     private val registerViewModel : RegisterViewModel by viewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -27,6 +31,7 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        firebaseAnalytics = Firebase.analytics
 
         binding.btnRegister.setOnClickListener{ toCreateAccount() }
     }

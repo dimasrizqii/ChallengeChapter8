@@ -10,6 +10,9 @@ import com.bumptech.glide.Glide
 import com.dimasrizqi.challenge7.databinding.FragmentDetailBinding
 import com.dimasrizqi.challenge7.models.Data
 import com.dimasrizqi.challenge7.service.TheMovieDBApiInterface
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Callback
@@ -20,6 +23,8 @@ import javax.inject.Inject
 class DetailFragment: Fragment() {
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
 
     @Inject
     lateinit var api : TheMovieDBApiInterface
@@ -35,6 +40,7 @@ class DetailFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        firebaseAnalytics = Firebase.analytics
 
         getMovieDetails()
     }
