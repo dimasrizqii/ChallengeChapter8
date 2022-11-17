@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Challenge Chapter 6 (EN)</string>
+    <string name="app_name">Challenge Chapter 6 (EN)</string>
     <string name="prompt_username">Input Username</string>
     <string name="prompt_email">Input Email</string>
     <string name="prompt_password">Input Password</string>

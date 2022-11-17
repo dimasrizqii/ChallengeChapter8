@@ -1,3 +1,5 @@
+@file:Suppress("JoinDeclarationAndAssignment", "unused")
+
 package com.dimasrizqi.challenge7.ui.profile
 
 import android.app.Application
@@ -14,11 +16,11 @@ import javax.inject.Inject
 @HiltViewModel
 class ProfileViewModel @Inject constructor(val dataStoreManager: DataStoreManager, application: Application) : ViewModel() {
 
-    internal var outputUri: Uri? = null
+    private var outputUri: Uri? = null
 
     private val workManager = WorkManager.getInstance(application)
 
-    internal val outputWorkInfos: LiveData<List<WorkInfo>>
+    private val outputWorkInfos: LiveData<List<WorkInfo>>
 
     init {
         outputWorkInfos = workManager.getWorkInfosByTagLiveData(TAG_OUTPUT)

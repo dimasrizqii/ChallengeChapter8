@@ -1,3 +1,5 @@
+@file:Suppress("RedundantNullableReturnType")
+
 package com.dimasrizqi.challenge7.ui.detail
 
 import android.os.Bundle

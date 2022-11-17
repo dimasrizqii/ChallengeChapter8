@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Movie App (Pro)</string>
+    <string name="app_name">Movie App (Pro)</string>
     <string name="prompt_username">Input Username</string>
     <string name="prompt_email">Input Email</string>
     <string name="prompt_password">Input Password</string>

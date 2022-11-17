@@ -1,3 +1,7 @@
+@file:Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
+    "unused", "unused", "unused"
+)
+
 package com.dimasrizqi.challenge7.data.room.repository
 
 import com.dimasrizqi.challenge7.data.room.dao.AccountDao

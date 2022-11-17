@@ -1,3 +1,5 @@
+@file:Suppress("ClassName")
+
 package com.dimasrizqi.challenge7
 
 import org.junit.Test

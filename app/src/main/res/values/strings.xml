@@ -4,8 +4,8 @@
     <string name="prompt_email">Input Email</string>
     <string name="prompt_password">Input Password</string>
     <string name="prompt_confirm_password">Confirm Password</string>
-    <string name="login" translatable="false">Login</string>
-    <string name="register" translatable="false">Register</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
     <string name="dont_have_account">Don\'t have account?</string>
     <string name="popular_movies">Popular Movies</string>
     <string name="lorem_ipsum" translatable="false">Lorem ipsum dolor sit amet odio dicunt repudiandae repudiandae eos mauris corrumpit impedit donec iusto dicta vitae usu te per vitae mauris dicunt</string>

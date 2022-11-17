@@ -1,3 +1,5 @@
+@file:Suppress("UnnecessaryVariable")
+
 package com.dimasrizqi.challenge7.utils
 
 import android.graphics.Bitmap

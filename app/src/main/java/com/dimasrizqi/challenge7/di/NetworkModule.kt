@@ -1,3 +1,5 @@
+@file:Suppress("MemberVisibilityCanBePrivate")
+
 package com.dimasrizqi.challenge7.di
 
 import com.dimasrizqi.challenge7.service.TheMovieDBApiInterface

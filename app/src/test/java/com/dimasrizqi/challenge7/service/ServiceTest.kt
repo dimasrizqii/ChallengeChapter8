@@ -1,6 +1,5 @@
 package com.dimasrizqi.challenge7.service
 
-import com.bumptech.glide.load.engine.Resource
 import com.dimasrizqi.challenge7.models.Data
 import com.dimasrizqi.challenge7.models.MovieResponse
 import io.mockk.every
@@ -13,7 +12,7 @@ import org.junit.Test
 import retrofit2.Call
 
 class ServiceTest {
-    lateinit var service : TheMovieDBApiInterface
+    private lateinit var service : TheMovieDBApiInterface
 
     @Before
     fun setUp(){

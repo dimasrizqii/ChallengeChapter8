@@ -1,3 +1,5 @@
+@file:Suppress("SameParameterValue")
+
 package com.dimasrizqi.challenge7.ui.profile
 
 import android.Manifest
@@ -46,7 +48,7 @@ class ProfileFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root

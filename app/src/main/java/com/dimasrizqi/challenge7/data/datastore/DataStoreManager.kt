@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.dimasrizqi.challenge7.data.datastore
 
 import android.content.Context
@@ -63,12 +65,6 @@ class DataStoreManager @Inject constructor(@ApplicationContext private val conte
     fun getPassword(): Flow<String> {
         return context.accountDataStore.data.map {
             it[PASSWORD] ?: ""
-        }
-    }
-
-    fun getAddress(): Flow<String> {
-        return context.accountDataStore.data.map {
-            it[ADDRESS] ?: ""
         }
     }
 

@@ -1,5 +1,6 @@
 package com.dimasrizqi.challenge7.ui.home
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -15,6 +16,7 @@ class HomeAdapter(private val movies: List<Data>) : RecyclerView.Adapter<HomeAda
     class HomeViewHolder(private var binding: MovieItemBinding, val movies: List<Data>) :
         RecyclerView.ViewHolder(binding.root) {
         private val imageBase = "https://image.tmdb.org/t/p/w500/"
+        @SuppressLint("SetTextI18n")
         fun bindMovie(movie: Data){
             binding.tvMovieTitle.text = movie.title
             binding.tvReleaseDate.text = "Released on : " + movie.releaseDate
@@ -36,6 +38,6 @@ class HomeAdapter(private val movies: List<Data>) : RecyclerView.Adapter<HomeAda
     override fun getItemCount(): Int = movies.size
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
-        holder.bindMovie(movies.get(position))
+        holder.bindMovie(movies[position])
     }
 }

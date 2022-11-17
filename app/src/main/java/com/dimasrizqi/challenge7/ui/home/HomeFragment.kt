@@ -1,5 +1,6 @@
 package com.dimasrizqi.challenge7.ui.home
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -22,6 +23,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
+@Suppress("DEPRECATION", "DeprecatedCallableAddReplaceWith")
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -38,7 +40,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
@@ -49,12 +51,13 @@ class HomeFragment : Fragment() {
         setHasOptionsMenu(true)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         firebaseAnalytics = Firebase.analytics
         recyclerView = binding.rvMovieList
 
         homeViewModel.getUsername().observe(viewLifecycleOwner) {
-            binding.tvWelcome.text = "Welcome, " + it.toString()
+            binding.tvWelcome.text = "Welcome, $it"
         }
 
         recyclerView.layoutManager = LinearLayoutManager(context)
@@ -63,10 +66,12 @@ class HomeFragment : Fragment() {
             recyclerView.adapter = HomeAdapter(movies) }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_profile, menu)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.menu_profile -> {

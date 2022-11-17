@@ -1,3 +1,5 @@
+@file:Suppress("RemoveEmptyClassBody")
+
 package com.dimasrizqi.challenge7
 
 import android.app.Application

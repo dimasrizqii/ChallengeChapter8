@@ -1,6 +1,7 @@
+@file:Suppress("DEPRECATION")
+
 package com.dimasrizqi.challenge7.room
 
-import com.dimasrizqi.challenge7.data.room.AppDatabase
 import com.dimasrizqi.challenge7.data.room.dao.AccountDao
 import com.dimasrizqi.challenge7.data.room.entity.AccountEntity
 import com.dimasrizqi.challenge7.data.room.repository.AccountRepository
@@ -13,10 +14,10 @@ import org.mockito.Mockito
 import org.mockito.kotlin.any
 import org.mockito.kotlin.mock
 
+@Suppress("DEPRECATION")
 class DatabaseTest {
     private lateinit var accountDao: AccountDao
     private lateinit var accountRepository: AccountRepository
-    private lateinit var appDatabase: AppDatabase
 
     @Before
     fun setUp() {

@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/WidthParentAndHeightContent"
-    android:background="@color/pale_black"
     tools:context=".ui.profile.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +18,6 @@
         android:layout_marginTop="30dp"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
         android:textAlignment="center"/>
 
     <ImageView
@@ -31,7 +29,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_profile"
-        android:src="@drawable/ic_photo_profile" />
+        android:src="@drawable/ic_photo_profile"
+        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/btn_change_image"
