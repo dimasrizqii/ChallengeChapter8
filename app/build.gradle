@@ -12,12 +12,12 @@ plugins {
 
 android {
     signingConfigs {
-        debug {
-            storeFile file('C:\\Users\\Dimas Rizqi\\Documents\\Aplikasi\\ChallengeTest.jks')
-            storePassword '12345678'
-            keyAlias 'key0'
-            keyPassword '12345678'
-        }
+//        debug {
+//            storeFile file('C:\\Users\\Dimas Rizqi\\Documents\\Aplikasi\\ChallengeTest.jks')
+//            storePassword '12345678'
+//            keyAlias 'key0'
+//            keyPassword '12345678'
+//        }
     }
     compileSdk 32
 
