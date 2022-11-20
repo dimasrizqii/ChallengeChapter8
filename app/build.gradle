@@ -12,12 +12,12 @@ plugins {
 
 android {
     signingConfigs {
-//        release {
+        release {
 //            storeFile file('C:\\Users\\Dimas Rizqi\\AndroidStudioProjects\\Challenge7\\app\\ChallengeTest.jks')
 //            storePassword '12345678'
 //            keyAlias 'key0'
 //            keyPassword '12345678'
-//        }
+        }
     }
     compileSdkVersion 32
 
