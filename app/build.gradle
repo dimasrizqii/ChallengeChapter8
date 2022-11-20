@@ -12,12 +12,12 @@ plugins {
 
 android {
     signingConfigs {
-//        debug {
-//            storeFile file('C:\\Users\\Dimas Rizqi\\Documents\\Aplikasi\\ChallengeTest.jks')
-//            storePassword '12345678'
-//            keyAlias 'key0'
-//            keyPassword '12345678'
-//        }
+        debug {
+            storeFile file('C:\\Users\\Dimas Rizqi\\AndroidStudioProjects\\Challenge7\\app\\ChallengeTest.jks')
+            storePassword '12345678'
+            keyAlias 'key0'
+            keyPassword '12345678'
+        }
     }
     compileSdk 32
 
@@ -33,13 +33,9 @@ android {
     }
 
     buildTypes {
-        debug {
-            signingConfig signingConfigs.debug
-        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
