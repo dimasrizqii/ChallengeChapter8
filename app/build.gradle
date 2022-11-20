@@ -12,12 +12,12 @@ plugins {
 
 android {
     signingConfigs {
-//        release {
-//            storeFile file('C:\\Users\\Dimas Rizqi\\AndroidStudioProjects\\Challenge7\\app\\ChallengeTest.jks')
-//            storePassword '12345678'
-//            keyAlias 'key0'
-//            keyPassword '12345678'
-//        }
+        release {
+            storeFile file('C:\\Users\\Dimas Rizqi\\AndroidStudioProjects\\Challenge7\\app\\ChallengeTest.jks')
+            storePassword '12345678'
+            keyAlias 'key0'
+            keyPassword '12345678'
+        }
     }
     compileSdk 32
 
@@ -36,6 +36,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
@@ -56,12 +57,14 @@ android {
             applicationIdSuffix = ".free"
             versionNameSuffix = ".free"
             manifestPlaceholders = [appLabel : "Free Application"]
+            signingConfig signingConfigs.release
         }
         pro {
             dimension = 'version'
             applicationIdSuffix = ".pro"
             versionNameSuffix = ".pro"
             manifestPlaceholders = [appLabel: "Pro Application"]
+            signingConfig signingConfigs.release
         }
     }
     lint {
