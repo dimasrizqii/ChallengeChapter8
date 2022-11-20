@@ -19,12 +19,13 @@ android {
 //            keyPassword '12345678'
 //        }
     }
-    compileSdk 32
+    compileSdkVersion 32
 
     defaultConfig {
         applicationId "com.dimasrizqi.challenge7"
-        minSdk 21
-        targetSdk 32
+        minSdkVersion 21
+        //noinspection OldTargetApi
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
